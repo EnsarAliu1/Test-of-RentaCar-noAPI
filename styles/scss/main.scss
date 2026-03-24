@@ -1,0 +1,108 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./_mixins.scss";
+@import "./_constants.scss";
+
+@include font-family;
+@include header-style;
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #28a745;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.toast.show {
+  opacity: 1;
+}
+
+.hero-banner {
+  background: #0f1729;
+  background:
+    linear-gradient(
+      135deg,
+      hsl(222 60% 8% / 0.95) 0%,
+      hsl(222 47% 15% / 0.85) 100%
+    ),
+    url(../../images/hero-banner.jpg);
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  h1 {
+    font-size: 4rem;
+  }
+  button {
+    box-shadow:
+      0 0 1px $primary-color,
+      0 0 2px $primary-color;
+
+    &:hover {
+      box-shadow:
+        0 0 2px $primary-color,
+        0 0 4px $primary-color,
+        0 0 8px $primary-color,
+        0 0 10px $primary-color,
+        0 0 15px $primary-color;
+      transition: 0.4s all ease;
+    }
+  }
+
+  -webkit-box-shadow: 0px 38px 25px -9px rgba(156, 159, 194, 1);
+  -moz-box-shadow: 0px 38px 25px -9px rgba(156, 159, 194, 1);
+  box-shadow: 0px 38px 25px -9px rgba(156, 159, 194, 1);
+}
+
+.makinat-tona {
+  .card-img {
+    height: 275px;
+    img {
+      object-fit: cover;
+    }
+  }
+  button:hover {
+    background-color: rgb(255, 191, 0);
+    transition: 0.5s all ease;
+  }
+}
+
+.faq {
+  .card {
+    -webkit-box-shadow: -4px 11px 46px -9px rgba(156, 159, 194, 1);
+    -moz-box-shadow: -4px 11px 46px -9px rgba(156, 159, 194, 1);
+    box-shadow: -4px 11px 46px -9px rgba(156, 159, 194, 1);
+    i {
+      background-color: #f9e4a5;
+    }
+  }
+}
+
+.reserve {
+  background: #0f1729;
+  background: linear-gradient(
+    135deg,
+    hsl(222 60% 8% / 0.95) 0%,
+    hsl(222 47% 15% / 0.85) 100%
+  );
+
+  button {
+    box-shadow:
+      0 0 1px $primary-color,
+      0 0 2px $primary-color;
+
+    &:hover {
+      box-shadow:
+        0 0 2px $primary-color,
+        0 0 4px $primary-color,
+        0 0 8px $primary-color,
+        0 0 10px $primary-color,
+        0 0 15px $primary-color;
+      transition: 0.4s all ease;
+    }
+  }
+}
+
+@include footer-style;

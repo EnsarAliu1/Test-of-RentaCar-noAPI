@@ -1,0 +1,37 @@
+@import "./_variables.scss";
+
+.w-80 {
+  width: 80%;
+}
+
+.bg-primary {
+  background-color: $primary-color !important;
+}
+
+.bg-secondary {
+  background-color: $secondary-color !important;
+}
+
+.text-primary {
+  color: $primary-color !important;
+}
+
+.text-light {
+  color: white !important;
+}
+
+.current-page {
+  color: $primary-color !important;
+}
+
+.border-primary {
+  border-color: $primary-color !important;
+}
+
+.text-pharagraph {
+  color: $pharagraph-color !important;
+}
+
+.bg-pharagraph {
+  background-color: $pharagraph-color !important;
+}

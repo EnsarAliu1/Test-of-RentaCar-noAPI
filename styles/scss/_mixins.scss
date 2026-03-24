@@ -1,0 +1,141 @@
+@import "./_variables.scss";
+
+@mixin font-family {
+  body {
+    font-family: "Syne", sans-serif;
+  }
+}
+
+@mixin header-style {
+  header {
+    li {
+      display: inline-block;
+      position: relative;
+      transition: 0.4s all ease;
+
+      &:hover {
+        color: $primary-color;
+        transition: 0.4s all ease;
+        cursor: pointer;
+      }
+
+      &::after {
+        content: " ";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 5px;
+        left: 0;
+        background-color: $primary-color;
+        transform-origin: bottom right;
+        transition: transform 0.5s ease-out;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+
+    button {
+      box-shadow:
+        0 0 1px $primary-color,
+        0 0 2px $primary-color;
+
+      &:hover {
+        box-shadow:
+          0 0 2px $primary-color,
+          0 0 4px $primary-color,
+          0 0 8px $primary-color,
+          0 0 10px $primary-color,
+          0 0 15px $primary-color;
+        transition: 0.4s all ease;
+      }
+    }
+  }
+}
+
+@mixin footer-style {
+  footer {
+    p {
+      display: block;
+      position: relative;
+      transition: 0.4s all ease;
+
+      &:hover {
+        color: $primary-color;
+        transition: 0.4s all ease;
+        cursor: pointer;
+      }
+
+      &::after {
+        content: " ";
+        position: absolute;
+        width: 50%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 5px;
+        left: 30%;
+        background-color: $primary-color;
+        transform-origin: bottom right;
+        transition: transform 0.5s ease-out;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+  }
+}
+
+@mixin sidebar-style {
+  .sidebar {
+    a {
+      display: inline-block;
+      position: relative;
+      transition: 0.4s all ease;
+
+      &:hover {
+        color: $primary-color;
+        transition: 0.4s all ease;
+        cursor: pointer;
+      }
+
+      &::after {
+        content: " ";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 5px;
+        left: 0;
+        background-color: $primary-color;
+        transform-origin: bottom right;
+        transition: transform 0.5s ease-out;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+
+    button {
+      box-shadow:
+        0 0 1px $primary-color,
+        0 0 2px $primary-color;
+
+      &:hover {
+        box-shadow:
+          0 0 2px $primary-color,
+          0 0 4px $primary-color,
+          0 0 8px $primary-color,
+          0 0 10px $primary-color,
+          0 0 15px $primary-color;
+        transition: 0.4s all ease;
+      }
+    }
+  }
+}

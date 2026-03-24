@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="../styles/css/kontakt.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css"
+        integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Syne:wght@400..800&display=swap"
+        rel="stylesheet">
+
+<script src="../data/db.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-secondary">
+            <div class="container w-80 ">
+                <i class="bi bi-car-front-fill fs-2 text-primary me-2"></i>
+                <a class="navbar-brand fs-2 fw-bold text-light" href="../index.html">Rent a Car</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-flex align-items-center gap-4">
+                        <li class="nav-item">
+                            <a class="nav-link active text-light fs-5" href="../index.html">Ballina</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-light fs-5" href="./automjetet.html">Automjetet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-light fs-5" href="./rrethnesh.html">Rreth Nesh</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-primary fs-5" href="./kontakt.html">Kontakt</a>
+                        </li>
+                    </ul>
+                    <div class="buttons">
+                        <a href="./hyr.html" class="text-decoration-none" id="nav-user">
+                            <button
+                                class="btn bg-secondary text-light border-1 border-primary rounded-3 me-2 fw-bold py-2">Hyr</button>
+                        </a>
+                        <a href="./regjistrohu.html" class="text-decoration-none" id="log-out">
+                            <button class="btn bg-primary text-dark fw-bold rounded-3 py-2">Regjistrohu</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="kontakt-banner p-5">
+            <div class="container text-center w-80">
+                <h2 class="text-light fs-1 fw-bold mb-3">Na <span class="text-primary">Kontaktoni</span></h2>
+                <p class="text-light w-50 mx-auto mb-3">Jemi gjithmonë gati t'ju ndihmojmë. Mos hezitoni të na
+                    kontaktoni!
+                </p>
+
+            </div>
+        </section>
+
+        <section class="form-section py-5 text-center">
+            <div class="container w-80 ">
+                <div class="row d-flex flex-row justify-content-between gap-4">
+                    <div class="col-md-3 w-auto">
+                        <div class="col d-flex flex-column gap-4">
+                            <div class="row">
+                                <div class="card d-flex flex-row gap-3 p-2">
+                                    <div class="mt-4">
+                                        <i class="bi bi-geo-alt fs-3 text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold">Adresa</h6>
+                                        <p class="text-pharagraph">Rruga Dëshmorët e Kombit</p>
+                                        <p class="text-pharagraph">Skenderaj, Kosove</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="card d-flex flex-row gap-3 p-2">
+                                    <div class="mt-4">
+                                        <i class="bi bi-telephone fs-3 text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold">Telefoni</h6>
+                                        <p class="text-pharagraph">+355 44 123 456</p>
+                                        <p class="text-pharagraph">+355 49 234 567</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="card d-flex flex-row gap-3 p-2">
+                                    <div class="mt-4">
+                                        <i class="bi bi-envelope fs-3 text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold">E-mail</h6>
+                                        <p class="text-pharagraph">info@rentacar.xk</p>
+                                        <p class="text-pharagraph">support@rentacar.xk</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="card d-flex flex-row gap-3 p-2">
+                                    <div class="mt-4">
+                                        <i class="bi bi-clock fs-3 text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold">Orari</h6>
+                                        <p class="text-pharagraph">E Hënë - E Shtunë: 08:00 - 20:00</p>
+                                        <p class="text-pharagraph">E Dielë: 10:00 - 18:00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9 flex-grow-1 w-auto">
+                        <form class="border border-primary rounded p-4" id="kontaktForm">
+                            <h3 class="fw-bold">Dergoni nje Mesazh</h3>
+                            <div class="row d-flex flex-row justify-content-between gap-2 mt-4">
+                                <div class="col flex-grow-1">
+                                    <label class="fw-bold" for="emri">Emri i Plote</label>
+                                    <br>
+                                    <input class="py-2 w-100 rounded-2 border border-dark" type="text"
+                                        placeholder="Emri" id="emriPlote" name="emriPlote">
+                                </div>
+                                <div class="col flex-grow-1">
+                                    <label class="fw-bold" for="email">Email</label>
+                                    <br>
+                                    <input class="py-2 w-100 rounded-2 border border-dark" type="text"
+                                        placeholder="Email@any.com" id="email" name="email">
+                                </div>
+                            </div>
+                            <div class="row d-flex flex-row justify-content-between gap-2 mt-4">
+                                <div class="col flex-grow-1">
+                                    <label class="fw-bold" for="telefoni">Telefoni</label>
+                                    <br>
+                                    <input class="py-2 w-100 rounded-2 border border-dark" type="text"
+                                        placeholder="+383 49 123 456" id="telefoni" name="telefoni">
+                                </div>
+                                <div class="col flex-grow-1">
+                                    <label class="fw-bold" for="subjekti">Subjekti</label>
+                                    <br>
+                                    <input class="py-2 w-100 rounded-2 border border-dark" type="text"
+                                        placeholder="Si munde te ju ndihmojme?" id="subjekti" name="subjekti">
+                                </div>
+                            </div>
+                            <div class="row d-flex flex-row justify-content-between gap-2 mt-4">
+                                <div class="col flex-grow-1">
+                                    <label class="fw-bold" for="mesazhi">Mesazhi</label>
+                                    <br>
+                                    <textarea class="w-100 rounded-2 border border-dark" name="mesazhi" id="mesazhi"
+                                        rows="5" placeholder="Shkruani mesazhin tuaj këtu..." id="mesazhi"
+                                        name="mesazhi"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit"
+                                class="btn bg-primary text-light fw-bold rounded-3 py-2 px-5 mt-3">Dërgo
+                                Mesazhin <i class="bi bi-send"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="position-fixed top-0 end-0 p-3" style="z-index: 9999;">
+        <div id="pageToast" class="toast align-items-center border-0" role="alert">
+            <div class="d-flex">
+                <div class="toast-body" id="toastText"></div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-5 bg-secondary">
+        <div class="container text-light w-80 text-center">
+            <div class="row d-flex flex-row justify-content-between align-content-center py-4 gap-5">
+                <div class="col flex-growth-1">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-car-front-fill fs-2 text-primary me-2 d-inline"></i>
+                        <p class="fs-4 fw-bold text-light mt-3">Rent a Car</p>
+                    </div>
+                    <p>
+                        Zgjidhni makinën tuaj të ëndrrave dhe udhëtoni me stil. Cilësi premium, çmime të arsyeshme.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-twitter-x"></i>
+                    </div>
+                </div>
+                <div class="col flex-growth-1">
+                    <h5 class="fw-bold text-primary">Lidhje të Shpejta</h5>
+                    <p>Automjetet</p>
+                    <p>Rezervo Tani</p>
+                    <p>Rreth Nesh</p>
+                    <p>Kontakt</p>
+                </div>
+                <div class="col flex-growth-1">
+                    <h5 class="fw-bold text-primary">Kategoritë</h5>
+                    <p>Ekonomike</p>
+                    <p>SUV</p>
+                    <p>Luksoze</p>
+                    <p>Sportive</p>
+                </div>
+                <div class="col flex-growth-1">
+                    <h5 class="fw-bold text-primary">Kontakti</h5>
+                    <p><i class="bi bi-telephone"></i> +355 43 123 456</p>
+                    <p><i class="bi bi-envelope"></i> info@rentacar.xk</p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23440.392380276273!2d20.77263391771783!3d42.745014504188255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13536a3a57626035%3A0x4621cccd0f198bc8!2sSkenderaj%2041000!5e0!3m2!1sen!2s!4v1772283401176!5m2!1sen!2s"
+                        width="150" height="100" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <hr>
+            <p class="text-pharagraph mx-auto w-auto">© 2026 RentaCar. Të gjitha të drejtat të rezervuara.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/kontakt.js"></script>
+    <script src="../scripts/username.js"></script>
+</body>
+
+</html>

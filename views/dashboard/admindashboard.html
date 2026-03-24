@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../../styles/css/dashboard/admindashboard.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css"
+        integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Syne:wght@400..800&display=swap"
+        rel="stylesheet">
+
+<script src="../../data/db.js"></script>
+</head>
+
+<body>
+    <section class="dashboard">
+        <div class="container-fluid">
+            <div class="row d-flex felx-row justify-content-between">
+                <div class="col-md-3 bg-secondary sidebar">
+                    <div class="d-flex gap-3 text-light pt-4">
+                        <i class="bi bi-car-front-fill fs-3 text-primary"></i>
+                        <h2 class="fw-bold">Rent a Car</h2>
+                    </div>
+                    <hr class="text-light">
+                    <ul class="list-unstyled p-3">
+                        <li class="mb-4 fs-4">
+                            <a href="./admindashboard.html" class="text-decoration-none text-primary"><i
+                                    class="bi bi-house-door-fill"></i>
+                                Dashboard</a>
+                        </li>
+                        <li class="mb-4 fs-4">
+                            <a href="./adminautomjetet.html" class="text-decoration-none text-light"><i
+                                    class="bi bi-car-front-fill"></i>
+                                Automjetet</a>
+                        </li>
+                        <li class="mb-4 fs-4">
+                            <a href="./adminklientet.html" class="text-decoration-none text-light"><i
+                                    class="bi bi-people-fill"></i>
+                                Klientet</a>
+                        </li>
+                        <li class="mb-4 fs-4">
+                            <a href="./adminrezervimet.html" class="text-decoration-none text-light"><i
+                                    class="bi bi-calendar-check"></i>
+                                Rezervimet</a>
+                        </li>
+                        <li class="mb-4 fs-4">
+                            <a href="./adminmesazhet.html" class="text-decoration-none text-light"><i
+                                    class="bi bi-envelope-arrow-down-fill"></i> Mesazhet</a>
+                        </li>
+                        <li class="mb-4 fs-4">
+                            <a href="#" class="text-decoration-none text-light"><i class="bi bi-cash-stack"></i>
+                                Pagesat</a>
+                        </li>
+                        <li>
+                            <span id="adminUser"></span>
+                            <span id="logOut"></span>
+                        </li>
+                        <li class="mb-4 fs-4">
+                            <a href="#" class="text-decoration-none text-light"><i class="bi bi-gear-fill"></i>
+                                Settings</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-9">
+                    <section class="admin-dashboard py-5">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="card border-2 border-primary text-light">
+                                        <div class="card-body text-center">
+                                            <div class="d-flex fs-3 gap-3">
+                                                <i class="bi bi-car-front-fill text-primary"></i>
+                                                <h3>Automjetet</h3>
+                                            </div>
+                                            <span class="fs-1">509</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card border-2 border-primary text-light">
+                                        <div class="card-body text-center">
+                                            <div class="d-flex fs-3 gap-3">
+                                                <i class="bi bi-people-fill text-primary"></i>
+                                                <h3>Klientet</h3>
+                                            </div>
+                                            <span class="fs-1">12.453</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card border-2 border-primary text-light">
+                                        <div class="card-body text-center">
+                                            <div class="d-flex fs-3 gap-3">
+                                                <i class="bi bi-calendar-check text-primary"></i>
+                                                <h3>Rezervimet</h3>
+                                            </div>
+                                            <span class="fs-1">23.456</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card border-2 border-primary text-light">
+                                        <div class="card-body text-center">
+                                            <div class="d-flex fs-3 gap-3">
+                                                <i class="bi bi-envelope-arrow-down-fill text-primary"></i>
+                                                <h3>Mesazhet</h3>
+                                            </div>
+                                            <span class="fs-1">58.893</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container py-5">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card text-center text-light border-success">
+                                        <div class="card-header text-light">
+                                            Weekly Income
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Last week as usual</h5>
+                                            <p class="card-text">Reporting a 12K Income Without reservations active</p>
+                                            <h1>12.238K</h1>
+                                        </div>
+                                        <div class="card-footer text-light">
+                                            Raport of 2 days ago
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card text-center text-light border-success">
+                                        <div class="card-header text-light">
+                                            Monthly Income
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Last Month Busy</h5>
+                                            <p class="card-text">Reporting a 46K Income Without reservations active</p>
+                                            <h1>45.948K</h1>
+                                        </div>
+                                        <div class="card-footer text-light">
+                                            Raport of 2 days ago
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card text-center text-light border-success">
+                                        <div class="card-header text-light">
+                                            Yearly Income
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Last Year Most Succesfuly</h5>
+                                            <p class="card-text">Reporting a 542.321K Income Without reservations active
+                                            </p>
+                                            <h1>542.321K</h1>
+                                        </div>
+                                        <div class="card-footer text-light">
+                                            Raport of last month
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row py-5 ">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <div class="card text-light border-danger">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Best Bussines on Growth in Balkans</h5>
+                                            <p class="card-text">Click here to know more about the prize and our
+                                                achivements</p>
+                                            <a href="#" class="btn btn-primary bg-primary border-0">Clik Here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="card text-light border-danger">
+                                        <div class="card-body">
+                                            <h5 class="card-title">One of the Best Bussines on Growth in World</h5>
+                                            <p class="card-text">Click here to know more about the prize and our
+                                                achivements</p>
+                                            <a href="#" class="btn btn-primary bg-primary border-0">Click Here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../scripts/dashboard/admindashboard.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="../../scripts/dashboard/admin.js"></script>
+</body>
+
+</html>

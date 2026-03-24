@@ -1,0 +1,23 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./_mixins.scss";
+@import "./_constants.scss";
+
+@include font-family;
+@include header-style;
+
+.automjetet {
+  .card-img {
+    height: 275px;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  button:hover {
+    background-color: rgb(255, 191, 0);
+    transition: 0.5s all ease;
+  }
+}
+
+@include footer-style;

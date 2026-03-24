@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automjetet</title>
+    <link rel="stylesheet" href="../styles/css/automjetet.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css"
+        integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Syne:wght@400..800&display=swap"
+        rel="stylesheet">
+
+<script src="../data/db.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-secondary">
+            <div class="container w-80">
+                <i class="bi bi-car-front-fill fs-2 text-primary me-2"></i>
+                <a class="navbar-brand fs-2 fw-bold text-light" href="../index.html">Rent a Car</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-flex align-items-center gap-4">
+                        <li class="nav-item">
+                            <a class="nav-link active text-light fs-5" href="../index.html">Ballina</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-primary fs-5" href="./automjetet.html">Automjetet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-light fs-5" href="./rrethnesh.html">Rreth Nesh</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-light fs-5" href="./kontakt.html">Kontakt</a>
+                        </li>
+                    </ul>
+                    <div class="buttons">
+                        <a href="./hyr.html" class="text-decoration-none" id="nav-user">
+                            <button
+                                class="btn bg-secondary text-light border-1 border-primary rounded-3 me-2 fw-bold py-2">Hyr</button>
+                        </a>
+                        <a href="./regjistrohu.html" class="text-decoration-none" id="log-out">
+                            <button class="btn bg-primary text-dark fw-bold rounded-3 py-2">Regjistrohu</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="automjetet py-5">
+        <div class="container w-80 text-center">
+            <h2 class="fw-bold">Automjetet Tona</h2>
+            <p class="text-pharagraph">Zgjidhni nga flota jonë e larmishme e automjeteve të cilësisë së lartë.</p>
+            <div class="container py-4">
+                <div class="card shadow-sm border-0 rounded-4 p-3">
+                    <div class="row g-3 align-items-center">
+
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-0">
+                                    <i class="bi bi-search"></i>
+                                </span>
+                                <input type="text" class="form-control bg-light border-0"
+                                    placeholder="Kërko marka, model..." id="searchInput">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-select bg-light border-0" id="zgjidhKarburantin">
+                                <option value="" disabled selected hidden>Karburanti</option>
+                                <option value="Nafte">Nafte</option>
+                                <option value="Benzine">Benzine</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-select bg-light border-0" id="zgjidhTransmisionin">
+                                <option value="" disabled selected hidden>Transmisioni</option>
+                                <option value="Automatik">Automatik</option>
+                                <option value="Manual">Manual</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-light w-100 d-flex align-items-center justify-content-center gap-2"
+                                id="pastroFiltrat">
+                                <i class="bi bi-funnel"></i>
+                                Pastro Filtrat
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex flex-row justify-content-between pt-4 w-80 m-auto" id="automjetet-container">
+
+        </div>
+    </section>
+    <footer class="py-5 bg-secondary mt-5">
+        <div class="container text-light w-80 text-center">
+            <div class="row d-flex flex-row justify-content-between align-content-center py-4 gap-5">
+                <div class="col flex-growth-1">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-car-front-fill fs-2 text-primary me-2 d-inline"></i>
+                        <p class="fs-4 fw-bold text-light mt-3">Rent a Car</p>
+                    </div>
+                    <p>
+                        Zgjidhni makinën tuaj të ëndrrave dhe udhëtoni me stil. Cilësi premium, çmime të arsyeshme.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-twitter-x"></i>
+                    </div>
+                </div>
+                <div class="col flex-growth-1">
+                    <h5 class="fw-bold text-primary">Lidhje të Shpejta</h5>
+                    <p>Automjetet</p>
+                    <p>Rezervo Tani</p>
+                    <p>Rreth Nesh</p>
+                    <p>Kontakt</p>
+                </div>
+                <div class="col flex-growth-1">
+                    <h5 class="fw-bold text-primary">Kategoritë</h5>
+                    <p>Ekonomike</p>
+                    <p>SUV</p>
+                    <p>Luksoze</p>
+                    <p>Sportive</p>
+                </div>
+                <div class="col flex-growth-1">
+                    <h5 class="fw-bold text-primary">Kontakti</h5>
+                    <p><i class="bi bi-telephone"></i> +355 43 123 456</p>
+                    <p><i class="bi bi-envelope"></i> info@rentacar.xk</p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23440.392380276273!2d20.77263391771783!3d42.745014504188255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13536a3a57626035%3A0x4621cccd0f198bc8!2sSkenderaj%2041000!5e0!3m2!1sen!2s!4v1772283401176!5m2!1sen!2s"
+                        width="150" height="100" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <hr>
+            <p class="text-pharagraph mx-auto w-auto">© 2026 RentaCar. Të gjitha të drejtat të rezervuara.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/username.js"></script>
+    <script src="../scripts/automjetet.js"></script>
+</body>
+
+</html>
