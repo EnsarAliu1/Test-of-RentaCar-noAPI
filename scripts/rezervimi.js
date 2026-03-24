@@ -35,7 +35,7 @@ if (automjeti) {
     let automjetiHTML = `
         <div class="card">
             <div class="card-img">
-                <img class="w-100 h-100 rounded-top-2" src="${automjeti.img}" alt="">
+                <img class="w-100 h-100 rounded-top-2" src="../${automjeti.img}" alt="">
             </div>
             <div class="card-body">
                 <div class="row justify-content-between align-content-center ">

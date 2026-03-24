@@ -8,7 +8,7 @@ const rentacar_db = {
       transmisioni: "Automatik",
       kapaciteti: "5",
       cmimi: "50",
-      img: "../images/toyota-yaris.jpg",
+      img: "images/toyota-yaris.jpg",
     },
     {
       id: "2",
@@ -18,7 +18,7 @@ const rentacar_db = {
       transmisioni: "Manual",
       kapaciteti: 5,
       cmimi: 38,
-      img: "../images/volkswagen-polo.jpg",
+      img: "images/volkswagen-polo.jpg",
     },
     {
       id: "3",
@@ -28,7 +28,7 @@ const rentacar_db = {
       transmisioni: "Automatik",
       kapaciteti: "5",
       cmimi: "110",
-      img: "../images/bmw-m5.jpg",
+      img: "images/bmw-m5.jpg",
     },
     {
       id: "4",
@@ -38,7 +38,7 @@ const rentacar_db = {
       transmisioni: "Automatik",
       kapaciteti: "5",
       cmimi: "150",
-      img: "../images/merceses-s-copue.jpg",
+      img: "images/merceses-s-copue.jpg",
     },
     {
       id: "5",
@@ -48,7 +48,7 @@ const rentacar_db = {
       transmisioni: "Automatik",
       kapaciteti: 5,
       cmimi: 200,
-      img: "../images/mercedes-s-coupe-v8.jpg",
+      img: "images/mercedes-s-coupe-v8.jpg",
     },
     {
       id: "6",
@@ -58,7 +58,7 @@ const rentacar_db = {
       transmisioni: "Automatik",
       kapaciteti: "5",
       cmimi: "120",
-      img: "../images/bmw-m3.jpg",
+      img: "images/bmw-m3.jpg",
     },
     {
       id: "7",
@@ -68,7 +68,7 @@ const rentacar_db = {
       transmisioni: "Automatik",
       kapaciteti: 2,
       cmimi: 350,
-      img: "../images/porche-911.jpg",
+      img: "images/porche-911.jpg",
     },
     {
       id: "8",
@@ -78,7 +78,7 @@ const rentacar_db = {
       transmisioni: "Automatik",
       kapaciteti: 4,
       cmimi: 280,
-      img: "../images/audi-rs6.jpg",
+      img: "images/audi-rs6.jpg",
     },
     {
       id: "9",
@@ -88,7 +88,7 @@ const rentacar_db = {
       transmisioni: "Automatik",
       kapaciteti: "5",
       cmimi: "60",
-      img: "../images/fiat.jpg",
+      img: "images/fiat.jpg",
     },
     {
       id: "10",
@@ -98,7 +98,7 @@ const rentacar_db = {
       transmisioni: "Automatik",
       kapaciteti: 7,
       cmimi: 75,
-      img: "../images/ford-suv.jpg",
+      img: "images/ford-suv.jpg",
     },
     {
       id: "11",
@@ -108,7 +108,7 @@ const rentacar_db = {
       transmisioni: "Manual",
       kapaciteti: 5,
       cmimi: 32,
-      img: "../images/ford-mustang.jpg",
+      img: "images/ford-mustang.jpg",
     },
     {
       id: "12",
@@ -118,7 +118,7 @@ const rentacar_db = {
       transmisioni: "Automatik",
       kapaciteti: 5,
       cmimi: 180,
-      img: "../images/hero-banner.jpg",
+      img: "images/hero-banner.jpg",
     },
   ],
   clients: [
@@ -656,7 +656,21 @@ const rentacar_db = {
 
 function getDb() {
   const localDb = localStorage.getItem("rentacar_db");
-  if (localDb) return JSON.parse(localDb);
+  if (localDb) {
+    const parsed = JSON.parse(localDb);
+    // Migrate old ../images/ paths to images/
+    let needsSave = false;
+    if (parsed.automjetet) {
+      parsed.automjetet.forEach(a => {
+        if (a.img && a.img.startsWith('../images/')) {
+          a.img = a.img.replace('../images/', 'images/');
+          needsSave = true;
+        }
+      });
+    }
+    if (needsSave) localStorage.setItem("rentacar_db", JSON.stringify(parsed));
+    return parsed;
+  }
   localStorage.setItem("rentacar_db", JSON.stringify(rentacar_db));
   return rentacar_db;
 }
