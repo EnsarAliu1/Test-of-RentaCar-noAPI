@@ -86,7 +86,7 @@ document.addEventListener("click", (e) => {
     const cells = row.querySelectorAll("td");
 
     const updated = {
-      emri: cells[1].querySelectorAll("input").value,
+      emri: cells[1].querySelector("input").value,
       mbiemri: cells[2].querySelector("input").value,
       email: cells[3].querySelector("input").value,
       telefoni: cells[4].querySelector("input").value,
@@ -127,7 +127,7 @@ document.addEventListener("click", (e) => {
     cells[4].textContent = originals.telefoni;
     cells[5].textContent = originals.username;
 
-    cells[7].innerHTML = `
+    cells[6].innerHTML = `
       <button class="py-1 px-2 text-dark bg-info border-0 rounded-2 mx-1 klientEdit" data-id="${id}"><i class="bi bi-pencil-square"></i></button>
       <button class="py-1 px-2 text-white bg-danger border-0 rounded-2 mx-1 klientDelete" data-id="${id}"><i class="bi bi-trash-fill"></i></button>
     `;

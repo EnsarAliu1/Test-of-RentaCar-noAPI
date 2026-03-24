@@ -103,6 +103,8 @@ autoForm.addEventListener("submit", (event) => {
     };
 
     reader.readAsDataURL(autoImg);
+  } else {
+    showToast("Ju lutem zgjidhni nje imazh per automjetin!", "error");
   }
 });
 /*********************************************/

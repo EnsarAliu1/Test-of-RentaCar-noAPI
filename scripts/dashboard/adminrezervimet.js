@@ -34,7 +34,7 @@ rezervimet.forEach((rezervimi) => {
                 <td>${rezervimi.id}</td>
                 <td>${rezervimi.automjetiId}</td>
                 <td>${rezervimi.clientId}</td>
-                <td>${rezervimi.username}</td>
+                <td>${rezervimi.username || ""}</td>
                 <td>${rezervimi.dataMarrjes}</td>
                 <td>${rezervimi.dataKthimit}</td>
                 <td>${rezervimi.shenime}</td>
@@ -161,7 +161,7 @@ document.addEventListener("click", (e) => {
   }
 
   //butoni per cancel
-  if (e.target.closest.contains("cancelBtn")) {
+  if (e.target.classList.contains("cancelBtn")) {
     const row = e.target.closest("tr");
     const cells = row.querySelectorAll("td");
     const originals = JSON.parse(row.dataset.originals);

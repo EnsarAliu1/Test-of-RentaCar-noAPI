@@ -3,7 +3,7 @@ let automjetetHTML = "";
 const automjetet = db.automjetet;
 const automjetetIndex = automjetet.slice(0, 6);
 automjetetIndex.forEach((automjeti) => {
-      automjetetHTML += `
+  automjetetHTML += `
         <div class="col-md-4 mb-4 mx-auto">
                 <div class="card">
                     <div class="card-img">
@@ -44,8 +44,8 @@ automjetetIndex.forEach((automjeti) => {
                 </div>
             </div>
     `;
-    });
-    document.getElementById("automjetet-container").innerHTML = automjetetHTML;
+});
+document.getElementById("automjetet-container").innerHTML = automjetetHTML;
 
 function rezervimi(automjetiId) {
   window.location.href = `rezervimi.html?automjetiId=${automjetiId}`;
